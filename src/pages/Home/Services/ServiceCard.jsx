@@ -1,5 +1,8 @@
+import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 const ServiceCard = ({ service }) => {
-  const { title, img, price } = service;
+  const { _id, title, img, price } = service;
   return (
     <div className="card mx-auto   bg-base-100 shadow-xl space-y-5">
       <figure className="px-10 pt-10">
@@ -11,23 +14,9 @@ const ServiceCard = ({ service }) => {
           <p className=" text-[#FF3811] text-xl font-semibold">
             Price: $ {price}
           </p>
-          <a>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-            >
-              <path
-                d="M4.5 12H19.5M19.5 12L12.75 5.25M19.5 12L12.75 18.75"
-                stroke="#FF3811"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </a>
+          <Link to={`/checkout/${_id}`}>
+            <FaArrowRight className=" text-[#FF3811] text-xl"></FaArrowRight>
+          </Link>
         </div>
       </div>
     </div>
