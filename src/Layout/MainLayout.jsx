@@ -6,8 +6,11 @@ import { Toaster } from "react-hot-toast";
 const MainLayout = () => {
   return (
     <div>
-      <NavBar></NavBar>
-      <Outlet></Outlet>
+      <div className=" container mx-auto">
+        <NavBar></NavBar>
+        <Outlet></Outlet>
+      </div>
+
       <Footer></Footer>
       <Toaster position="top-right" reverseOrder={false} />
     </div>
